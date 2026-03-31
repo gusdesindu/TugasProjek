@@ -118,6 +118,3 @@ Linked List sangat cocok digunakan dalam sistem reservasi karena fleksibel dan e
 
 ---
 
-## 📌 Catatan
-
-Proyek ini dibuat untuk keperluan pembelajaran dan pengenalan struktur data Linked List.
