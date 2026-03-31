@@ -1,78 +1,93 @@
-# 📌 Sistem Reservasi dengan Linked List
+# 📌 Sistem Reservasi Menggunakan Queue (Linked List)
 
 ## 📖 Deskripsi
 
-Proyek ini merupakan implementasi sederhana dari **struktur data Linked List** dalam bentuk **sistem reservasi**.
-Program ini dibuat untuk memenuhi tugas mata pelajaran Struktur Data.
+Proyek ini merupakan implementasi **struktur data Queue (Antrian)** menggunakan **Linked List** dalam sistem reservasi.
 
-Sistem ini memungkinkan pengguna untuk:
+Program ini dibuat untuk memenuhi tugas **UTS Struktur Data Semester Genap 2025/2026**.
 
-* Menambahkan data reservasi
-* Menampilkan daftar reservasi
-* Menghapus data reservasi
+Sistem ini digunakan untuk mengelola data reservasi pelanggan secara terurut berdasarkan waktu masuk (FIFO - First In First Out).
 
 ### ❓ Rumusan Masalah
 
-1. Bagaimana menyimpan data reservasi secara dinamis?
-2. Bagaimana menambahkan data tanpa mengganggu data lain?
-3. Bagaimana menghapus data dengan efisien?
-4. Bagaimana menampilkan seluruh data reservasi?
+1. Bagaimana konsep queue dapat digunakan dalam sistem reservasi?
+2. Bagaimana linked list membantu dalam implementasi queue?
+3. Bagaimana sistem ini dapat mengelola data reservasi secara efisien?
 
 ---
 
-## 🎯 Latar Belakang
+## 🎯 Studi Kasus
 
-Sistem reservasi sering digunakan dalam kehidupan sehari-hari seperti:
+Kasus yang digunakan adalah **Sistem Reservasi Restoran**.
 
-* Reservasi restoran
-* Booking hotel
-* Pemesanan tiket
+Dalam sistem ini:
 
-Karena data reservasi sering berubah (ditambah dan dihapus), maka digunakan **Linked List** yang bersifat dinamis dan fleksibel.
+* Pelanggan yang melakukan reservasi lebih dulu akan dilayani lebih dulu
+* Data reservasi disimpan dalam bentuk antrian
 
----
+Data yang disimpan:
 
-## 🧩 Konsep yang Digunakan
-
-Linked List adalah struktur data yang terdiri dari node, dimana setiap node memiliki:
-
-* Data (nama, tanggal, nomor)
-* Pointer ke node berikutnya
-
-Keunggulan:
-
-* Tidak perlu ukuran tetap
-* Mudah menambah dan menghapus data
-
----
-
-## 📂 Studi Kasus
-
-Contoh kasus: **Reservasi Restoran**
-
-Setiap pelanggan memiliki data:
-
-* Nama
+* Nama pelanggan
 * Tanggal reservasi
 * Nomor meja
 
-Sistem dapat:
-
-* Menambahkan reservasi baru
-* Menampilkan semua reservasi
-* Menghapus reservasi tertentu
-
 ---
 
 
 
+---
+
+## 💡 Solusi
+
+Solusi yang digunakan adalah:
+
+* Menggunakan **Queue (FIFO)** untuk mengatur urutan reservasi
+* Menggunakan **Linked List** agar data bersifat dinamis
+* Menyediakan operasi:
+
+  * Tambah data (enqueue)
+  * Hapus data (dequeue)
+  * Tampilkan data
+
+---
+
+## 📚 Landasan Teori
+
+Struktur data adalah cara untuk menyimpan dan mengelola data agar dapat digunakan secara efisien.
+
+Queue adalah struktur data yang menggunakan prinsip **FIFO (First In First Out)**, dimana data yang pertama masuk akan keluar terlebih dahulu.
+
+Linked List adalah struktur data dinamis yang terdiri dari node yang saling terhubung melalui pointer.
+
+Implementasi queue menggunakan linked list memungkinkan penambahan dan penghapusan data dilakukan dengan efisien tanpa batasan ukuran tetap.
+
+---
+
+## 🔄 Desain Sistem
+
+### Alur Sistem:
+
+Input → Proses → Output
+
+* Input: Data reservasi (nama, tanggal, nomor)
+* Proses:
+
+  * Tambah ke antrian (enqueue)
+  * Hapus dari antrian (dequeue)
+  * Menampilkan data
+* Output:
+
+  * Daftar reservasi
 
 
-## ▶️ Cara Menjalankan Program
+---
 
-1. Pastikan Python sudah terinstall
-2. Jalankan file program
-3. Output akan tampil di terminal
+## ▶️ Cara Menjalankan
+
+1. Jalankan program Python
+2. Tambahkan data dengan fungsi `enqueue`
+3. Hapus data dengan `dequeue`
+4. Tampilkan data dengan `display`
 
 ---
 
@@ -82,7 +97,7 @@ Sistem dapat:
 Andi - 2026-04-01 - No:A1
 Budi - 2026-04-01 - No:A2
 
-Reservasi dihapus
+Menghapus: Andi
 
 Budi - 2026-04-01 - No:A2
 ```
@@ -91,30 +106,29 @@ Budi - 2026-04-01 - No:A2
 
 ## ✅ Kelebihan
 
-* Struktur data dinamis
-* Mudah menambah dan menghapus data
-* Efisien untuk data yang sering berubah
+* Data terurut sesuai antrian (FIFO)
+* Dinamis (tidak terbatas)
+* Mudah dikelola
 
 ---
 
 ## ❌ Kekurangan
 
-* Tidak bisa akses langsung (harus traversal)
-* Menggunakan memori lebih banyak
+* Akses data harus berurutan
+* Membutuhkan memori lebih
 
 ---
 
 ## 🏁 Kesimpulan
 
-Linked List sangat cocok digunakan dalam sistem reservasi karena fleksibel dan efisien dalam mengelola data yang dinamis.
+Sistem reservasi berbasis queue menggunakan linked list mampu mengelola data secara terurut dan efisien.
+
+Konsep FIFO sangat cocok digunakan dalam sistem reservasi karena mencerminkan urutan pelayanan di dunia nyata.
 
 ---
 
 ## 👥 Anggota Kelompok
 
-* I Komang Galang Prawaba
+* I Komang Galang Prabawa
 * I Nyoman Gede Gata Atmaja
 * I.B.Gede Ambara Sindu Negara
-
----
-
