@@ -2,28 +2,21 @@
 
 ## 📖 Deskripsi
 
-Proyek ini merupakan implementasi **struktur data Queue (Antrian)** menggunakan **Linked List** dalam sistem reservasi.
+Proyek ini merupakan implementasi **struktur data Queue (Antrian)** menggunakan **Linked List** dalam sebuah sistem reservasi.
 
 Program ini dibuat untuk memenuhi tugas **UTS Struktur Data Semester Genap 2025/2026**.
 
-Sistem ini digunakan untuk mengelola data reservasi pelanggan secara terurut berdasarkan waktu masuk (FIFO - First In First Out).
+Sistem ini menerapkan konsep **FIFO (First In First Out)**, dimana data yang masuk pertama akan diproses atau dihapus terlebih dahulu.
 
-### ❓ Rumusan Masalah
+### 🎯 Studi Kasus
 
-1. Bagaimana konsep queue dapat digunakan dalam sistem reservasi?
-2. Bagaimana linked list membantu dalam implementasi queue?
-3. Bagaimana sistem ini dapat mengelola data reservasi secara efisien?
-
----
-
-## 🎯 Studi Kasus
-
-Kasus yang digunakan adalah **Sistem Reservasi Restoran**.
+Studi kasus yang digunakan adalah **Sistem Reservasi Restoran**.
 
 Dalam sistem ini:
 
-* Pelanggan yang melakukan reservasi lebih dulu akan dilayani lebih dulu
-* Data reservasi disimpan dalam bentuk antrian
+* Pelanggan melakukan reservasi meja
+* Data disimpan dalam bentuk antrian
+* Pelanggan yang lebih dulu reservasi akan diproses lebih dulu
 
 Data yang disimpan:
 
@@ -31,23 +24,24 @@ Data yang disimpan:
 * Tanggal reservasi
 * Nomor meja
 
----
+### ❓ Rumusan Masalah
 
+1. Bagaimana konsep queue dapat diterapkan dalam sistem reservasi?
+2. Bagaimana linked list digunakan untuk mengimplementasikan queue?
+3. Bagaimana sistem dapat mengelola data reservasi secara efisien?
 
+### 💡 Solusi
 
----
-
-## 💡 Solusi
-
-Solusi yang digunakan adalah:
+Solusi yang digunakan dalam sistem ini adalah:
 
 * Menggunakan **Queue (FIFO)** untuk mengatur urutan reservasi
 * Menggunakan **Linked List** agar data bersifat dinamis
-* Menyediakan operasi:
+* Mengimplementasikan operasi utama queue:
 
-  * Tambah data (enqueue)
-  * Hapus data (dequeue)
-  * Tampilkan data
+  * Enqueue (tambah data)
+  * Dequeue (hapus data depan)
+  * Peek (melihat data terdepan)
+  * Display (menampilkan seluruh data)
 
 ---
 
@@ -55,11 +49,11 @@ Solusi yang digunakan adalah:
 
 Struktur data adalah cara untuk menyimpan dan mengelola data agar dapat digunakan secara efisien.
 
-Queue adalah struktur data yang menggunakan prinsip **FIFO (First In First Out)**, dimana data yang pertama masuk akan keluar terlebih dahulu.
+Queue adalah struktur data yang menggunakan prinsip **FIFO (First In First Out)**, dimana elemen pertama yang masuk akan menjadi elemen pertama yang keluar.
 
-Linked List adalah struktur data dinamis yang terdiri dari node yang saling terhubung melalui pointer.
+Linked List adalah struktur data dinamis yang terdiri dari node-node yang saling terhubung melalui pointer.
 
-Implementasi queue menggunakan linked list memungkinkan penambahan dan penghapusan data dilakukan dengan efisien tanpa batasan ukuran tetap.
+Implementasi queue menggunakan linked list memungkinkan proses penambahan dan penghapusan data dilakukan dengan efisien tanpa batasan ukuran tetap.
 
 ---
 
@@ -69,61 +63,92 @@ Implementasi queue menggunakan linked list memungkinkan penambahan dan penghapus
 
 Input → Proses → Output
 
-* Input: Data reservasi (nama, tanggal, nomor)
-* Proses:
+* **Input:** Data reservasi (nama, tanggal, nomor)
+* **Proses:**
 
-  * Tambah ke antrian (enqueue)
-  * Hapus dari antrian (dequeue)
-  * Menampilkan data
-* Output:
+  * Enqueue (menambah data)
+  * Dequeue (menghapus data depan)
+  * Peek (melihat data depan)
+  * Display (menampilkan data)
+* **Output:** Daftar reservasi
 
-  * Daftar reservasi
+---
 
+
+
+# Contoh penggunaan
+reservasi = QueueReservasi()
+
+reservasi.enqueue("Andi", "2026-04-01", "A1")
+reservasi.enqueue("Budi", "2026-04-01", "A2")
+reservasi.enqueue("Citra", "2026-04-01", "A3")
+
+reservasi.display()
+reservasi.peek()
+reservasi.dequeue()
+reservasi.display()
+```
 
 ---
 
 ## ▶️ Cara Menjalankan
 
-1. Jalankan program Python
-2. Tambahkan data dengan fungsi `enqueue`
-3. Hapus data dengan `dequeue`
-4. Tampilkan data dengan `display`
+1. Pastikan Python sudah terinstall
+2. Jalankan file program
+3. Gunakan fungsi:
+
+   * `enqueue()` untuk menambah data
+   * `dequeue()` untuk menghapus data depan
+   * `peek()` untuk melihat data terdepan
+   * `display()` untuk menampilkan semua data
 
 ---
 
 ## 📊 Contoh Output
 
 ```
+Reservasi ditambahkan
+Reservasi ditambahkan
+Reservasi ditambahkan
+
+Daftar Reservasi:
 Andi - 2026-04-01 - No:A1
 Budi - 2026-04-01 - No:A2
+Citra - 2026-04-01 - No:A3
+
+Data terdepan: Andi - 2026-04-01 - No:A1
 
 Menghapus: Andi
 
+Daftar Reservasi:
 Budi - 2026-04-01 - No:A2
+Citra - 2026-04-01 - No:A3
 ```
 
 ---
 
 ## ✅ Kelebihan
 
-* Data terurut sesuai antrian (FIFO)
-* Dinamis (tidak terbatas)
-* Mudah dikelola
+* Menggunakan prinsip FIFO (adil sesuai urutan)
+* Struktur dinamis (tidak terbatas)
+* Operasi lebih efisien dengan pointer head dan rear
 
 ---
 
 ## ❌ Kekurangan
 
-* Akses data harus berurutan
-* Membutuhkan memori lebih
+* Tidak bisa akses data secara langsung
+* Membutuhkan memori tambahan untuk pointer
 
 ---
 
 ## 🏁 Kesimpulan
 
-Sistem reservasi berbasis queue menggunakan linked list mampu mengelola data secara terurut dan efisien.
+Sistem reservasi berbasis Queue menggunakan Linked List dapat mengelola data secara terurut dan efisien.
 
-Konsep FIFO sangat cocok digunakan dalam sistem reservasi karena mencerminkan urutan pelayanan di dunia nyata.
+Konsep FIFO sangat sesuai dengan sistem reservasi karena mencerminkan urutan pelayanan di dunia nyata.
+
+Semua operasi utama queue (enqueue, dequeue, peek, display) telah berhasil diimplementasikan.
 
 ---
 
