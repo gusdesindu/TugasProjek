@@ -47,13 +47,19 @@ Solusi yang digunakan dalam sistem ini adalah:
 
 ## 📚 Landasan Teori
 
-Struktur data adalah cara untuk menyimpan dan mengelola data agar dapat digunakan secara efisien.
+Struktur data merupakan cara untuk mengorganisasi data agar dapat diproses secara efisien dalam suatu sistem. Struktur data sangat penting dalam pengembangan program karena mempengaruhi kinerja dan efisiensi pengolahan data.
 
-Queue adalah struktur data yang menggunakan prinsip **FIFO (First In First Out)**, dimana elemen pertama yang masuk akan menjadi elemen pertama yang keluar.
+Queue adalah struktur data linear yang menggunakan prinsip **FIFO (First In First Out)**, yaitu data yang pertama masuk akan menjadi data pertama yang keluar. Konsep ini banyak diterapkan dalam sistem antrian seperti reservasi dan pelayanan pelanggan.
 
-Linked List adalah struktur data dinamis yang terdiri dari node-node yang saling terhubung melalui pointer.
+Linked List merupakan struktur data dinamis yang terdiri dari node yang saling terhubung. Setiap node memiliki data dan pointer ke node berikutnya, sehingga memudahkan proses penambahan dan penghapusan data tanpa batasan ukuran.
 
-Implementasi queue menggunakan linked list memungkinkan proses penambahan dan penghapusan data dilakukan dengan efisien tanpa batasan ukuran tetap.
+#### 📖 Daftar Pustaka
+
+1. Rosa A.S., dan M. Shalahuddin. 2018. *Rekayasa Perangkat Lunak Terstruktur dan Berorientasi Objek*. Bandung: Informatika.
+
+2. Abdul Kadir. 2014. *Dasar Pemrograman*. Yogyakarta: Andi.
+
+3. Wahana Komputer. 2015. *Struktur Data dengan Python*. Semarang: Andi Publisher.
 
 ---
 
