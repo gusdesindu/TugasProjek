@@ -4,9 +4,14 @@
 
 Proyek ini merupakan implementasi **struktur data Queue (Antrian)** menggunakan **Linked List** dalam sebuah sistem reservasi.
 
-Program ini dibuat untuk memenuhi tugas **UTS Struktur Data Semester Genap 2025/2026**.
-
 Sistem ini menerapkan konsep **FIFO (First In First Out)**, dimana data yang masuk pertama akan diproses atau dihapus terlebih dahulu.
+
+### Alasan Memilih Sistem Ini
+Sistem reservasi menggunakan Queue (Linked List) dipilih karena sesuai dengan konsep antrian di dunia nyata, khususnya pada restoran yang menerapkan prinsip FIFO (First In First Out).
+
+Selain itu, penggunaan Linked List membuat penyimpanan data menjadi lebih dinamis dan efisien, sehingga cocok untuk mengelola data reservasi yang terus bertambah.
+
+Sistem ini juga membantu memahami penerapan langsung struktur data dalam kasus nyata serta mudah untuk dikembangkan lebih lanjut.
 
 ### 🎯 Studi Kasus
 
